@@ -1,0 +1,13 @@
+it:
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+      day_month: "%-d %B"
+      month: "%B"
+      standard: "%Y-%m-%d"
+    month_names: [~, Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+    abbr_month_names: [~, Gen, Feb, Mar, Apr, Mag, Giu, Lug, Ago, Set, Ott, Nov, Dic]
+  from: Dal
+  to: al

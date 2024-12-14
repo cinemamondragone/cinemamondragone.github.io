@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="mx-auto sm:max-w-3xl">
+  <div class="flex flex-col sm:flex-row rounded-xl shadow-xl">
+    <figure>
+      <img 
+        src=<%= resource.data.img %>
+        alt=<%= resource.data.titolo %>
+        class="rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none sm:h-full" />
+    </figure>
+    <div class="grid gap-3 p-3 sm:p-5 sm:max-w-sm">
+      <h2 class="text-xl font-bold"><%= resource.data.titolo %></h2>
+      <p><%= resource.data.descrizione %></p>
+      <%= render "date_badge", from: resource.data.dal, to: resource.data.al %>
+      <div class="inline-block">
+        <%- resource.data.orari.each do |time| %>
+          <%= render "time_badge", time: time %>
+        <% end %>
+      </div>
+      <%- if resource.data.note %>
+        <p class="italic"><%= resource.data.note %></p>
+      <% end %>
+      <%= render "price_badge", price: (resource.data.prezzo || 7) %>
+      <%- if resource.data.ticket_url %>
+        <a href="<%= resource.data.ticket_url %>" class="btn btn-neutral">Acquista biglietto</a>
+      <% end %>
+    </div>
+  </div>
+</div>

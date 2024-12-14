@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="<%= site.locale %>">
+  <head>
+    <%= render "head", metadata: site.metadata, title: data.title %>
+  </head>
+  <body>
+    <%= render "navbar", metadata: site.metadata %>
+
+    <main class="container mx-auto mt-3 mb-6 px-3">
+      <%= yield %>
+    </main>
+
+    <%- render "footer", metadata: site.metadata %>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<a href="<%= resource.relative_url %>">
+  <div class="border rounded-xl flex items-center shadow-lg">
+    <figure>
+      <img 
+        class="w-24 h-36 sm:w-36 sm:h-48 object-cover rounded-s-xl"
+        src=<%= resource.data.img %>
+        alt=<%= resource.data.titolo %> />
+    </figure>
+    <div class="grid gap-2 sm:gap-4 ml-4 sm:ml-6">
+      <h2 class="text-xl font-bold max-w-56 sm:w-full"><%= resource.data.titolo %></h2>
+      <%= render "date_badge", from: resource.data.dal, to: resource.data.al %>
+      <div class="inline-block">
+        <%- resource.data.orari.each do |time| %>
+          <%= render "time_badge", time: time %>
+        <% end %>
+      </div>
+      <%- if resource.data.note %>
+        <p class="italic"><%= resource.data.note %></p>
+      <% end %>
+    </div>
+  </div>
+</a>

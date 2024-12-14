@@ -1,0 +1,20 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.metadata.title }}, {{ site.metadata.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.metadata.myvariable }}.
+
+title: Cinema Teatro Ariston Mondragone
+tagline: 
+short_title: CineTeatro Ariston 
+email: massimo.delise@gmail.com
+phone: "+39 333 9172892"
+website: https://cinemamondragone.it
+description: >-
+  Proiezioni e Spettacoli del Cinema Teatro Ariston Mondragone
+street_address: Corso Umberto I
+city: Mondragone
+province: CE
+postal_code: "81034"
+country: IT
+total_seats: 450

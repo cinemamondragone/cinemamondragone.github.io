@@ -1,0 +1,13 @@
+---
+layout: default
+title: Spettacoli
+---
+
+<div class="mx-auto max-w-lg">
+  <h1 class="text-2xl text-center font-bold mb-6"><%= resource.data.title %></h1>
+  <div class="grid gap-4">
+    <%- ResourceIndex.new(collections.spettacoli.resources).listed.each do |resource| %>
+      <%= render "card", resource: resource %>
+    <% end %>
+  </div>
+</div>

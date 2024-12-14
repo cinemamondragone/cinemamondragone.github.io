@@ -1,0 +1,15 @@
+---
+layout: default
+title: Spettacoli
+---
+
+<div class="mx-auto max-w-lg">
+  <h1 class="text-2xl text-center font-bold mb-6"><%= resource.data.title %></h1>
+  <div class="grid gap-4">
+    <%- collections.spettacoli.resources.select { |resource| Date.parse(resource.data.al) >= Date.today }
+                                        .sort { |a, b| DateTime.parse("#{a.data.dal}T#{a.data.orari.first}") <=> DateTime.parse("#{b.data.dal}T#{b.data.orari.first}") }
+                                        .each do |resource| %>
+      <%= render "card", resource: resource %>
+    <% end %>
+  </div>
+</div>

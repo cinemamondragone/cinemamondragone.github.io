@@ -12,7 +12,7 @@ layout: default
     </figure>
     <div class="grid gap-3 p-3 sm:p-5 sm:max-w-sm">
       <h2 class="text-xl font-bold"><%= resource.data.titolo %></h2>
-      <p><%= resource.data.descrizione %></p>
+      <p class="sm:min-h-64"><%= resource.data.descrizione %></p>
       <%= render "date_badge", from: resource.data.dal, to: resource.data.al %>
       <div class="inline-block">
         <%- resource.data.orari.each do |time| %>

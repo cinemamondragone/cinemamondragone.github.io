@@ -7,7 +7,7 @@
         alt=<%= resource.data.titolo %> />
     </figure>
     <div class="grid gap-2 sm:gap-4 ml-4 sm:ml-6">
-      <h2 class="text-xl font-bold max-w-56 sm:w-full"><%= resource.data.titolo %></h2>
+      <h2 class="text-xl font-bold max-w-64 sm:w-full"><%= resource.data.titolo %></h2>
       <%= render "date_badge", from: resource.data.dal, to: resource.data.al %>
       <div class="inline-block">
         <%- resource.data.orari.each do |time| %>

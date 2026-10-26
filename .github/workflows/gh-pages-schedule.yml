@@ -20,7 +20,13 @@ jobs:
         with:
           node-version: 20
           cache: "yarn"
-      - run: yarn install
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      # 💡 FISSA IL 404 RANDOM: Forza la compilazione del Frontend prima di lanciare Bridgetown
+      - name: Build Frontend Assets
+        run: yarn run build
 
       - name: Build
         env:

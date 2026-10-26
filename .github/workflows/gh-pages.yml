@@ -19,18 +19,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: 20
           cache: "yarn"
-
-      - run: yarn install --frozen-lockfile
+      - run: yarn install
 
       - name: Build
         env:
           BRIDGETOWN_ENV: production
         run: bin/bridgetown deploy
-
-      - name: Stabilize Assets
-        run: sleep 15
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
